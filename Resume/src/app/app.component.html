@@ -1,0 +1,27 @@
+<div style="text-align: center">
+  <h2 [style.color]='myColor'>{{name}}</h2>
+  <h3>Web Developer</h3>
+  <p [style.color]='myColor'>{{address}}</p>
+  <p>{{phoneNumber}}</p>
+  <p>{{email}}</p>
+</div>
+<div style="text-align: center">
+  <button (click) = "chgColor('orange')">Orange</button>
+  <button (click) = "chgColor('black')">Black</button>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h4>Strengths</h4>
+      <p>Responsiblity</p>
+      <p>Learner</p>
+      <p>Achiever</p>
+      <p>Includer</p>
+      <p>Futuristic</p>
+    </div>
+  </div>
+  <div class="col-sm-8">
+    <app-work-experience></app-work-experience>
+    <app-education></app-education>
+  </div>
+</div>
