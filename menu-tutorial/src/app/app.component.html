@@ -1,0 +1,20 @@
+<h1>AppComponent</h1>
+<app-menu></app-menu>
+<table>
+    <tr>
+        <td><a (click)="sort('id')">Id</a></td>
+        <td><a (click)="sort('name')">Name</a></td>
+        <td><a (click)="sort('state')">State</a></td>
+        <td><a (click)="sort('majorAcct')">Account</a></td>
+    </tr>
+    <tr *ngFor="let cust of customers | sort:sortColumn:ascOrder">
+        <td>{{cust.id}}</td>
+        <td>{{cust.name}}</td>
+        <td>{{cust.state}}</td>
+        <td>{{cust.majorAcct | bool}}</td>
+    </tr>
+</table>
+<div>
+    <h3>Routed Components Display Here</h3>
+    <router-outlet></router-outlet>
+</div>
