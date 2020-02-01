@@ -7,11 +7,12 @@ import { conditionallyCreateMapObjectLiteral } from '@angular/compiler/src/rende
 
 @Component({
   selector: 'app-movie-create',
-  templateUrl: './movie-create.component.html',
+  templateUrl: '..//movie-maint-shared/movie-maint.component.html',
   styleUrls: ['./movie-create.component.css']
 })
 export class MovieCreateComponent implements OnInit {
   title: string = 'Movie-Create';
+  submitBtnTitle: string = 'Create';
   movie: Movie = new Movie();
 
   constructor(private movieSvc: MovieService,
@@ -21,7 +22,7 @@ export class MovieCreateComponent implements OnInit {
     //do nothing
   }
 
-  create() {
+  save() {
     this.movieSvc.create(this.movie).subscribe(jRes => {
       let errs: string = jRes.errors;
       if (errs!=null) {
@@ -30,5 +31,4 @@ export class MovieCreateComponent implements OnInit {
       this.router.navigateByUrl('/movie/list');
     });
   }
-  
 }
