@@ -29,4 +29,8 @@ export class ActorCreateComponent implements OnInit {
       this.router.navigateByUrl('/actor/list');
     });
   }
+
+  backClicked() {
+    history.back();
+  }
 }

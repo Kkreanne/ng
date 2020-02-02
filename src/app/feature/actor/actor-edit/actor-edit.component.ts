@@ -36,4 +36,7 @@ export class ActorEditComponent implements OnInit {
     });
   }
 
+  backClicked() {
+    history.back();
+  }
 }

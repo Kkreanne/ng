@@ -20,9 +20,8 @@ export class MovieListComponent implements OnInit {
       jRes => {
         console.log("b");
         this.movies = jRes.data as Movie[];
-        console.log(this.movies); 
+        console.log(this.movies);
       }
     );
   }
-
 }

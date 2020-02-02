@@ -31,4 +31,8 @@ export class MovieCreateComponent implements OnInit {
       this.router.navigateByUrl('/movie/list');
     });
   }
+
+  backClicked() {
+    history.back();
+  }
 }

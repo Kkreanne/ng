@@ -57,7 +57,7 @@ export class CreditEditComponent implements OnInit {
   }
 
   backClicked() {
-    
+    history.back();
   }
 
   compMovie(a: Movie, b: Movie): boolean {  //comparing a movie value that the user selects with somethinge else 

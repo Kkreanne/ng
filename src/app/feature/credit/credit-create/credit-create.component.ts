@@ -49,4 +49,8 @@ export class CreditCreateComponent implements OnInit {
       this.router.navigateByUrl('/credit/list');
     });
   }
+
+  backClicked() {
+    history.back();
+  }
 }
